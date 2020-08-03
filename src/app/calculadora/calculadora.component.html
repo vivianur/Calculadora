@@ -1,0 +1,31 @@
+<div id="calculadora">
+
+  <div class="clear">
+    <div class="btn" (click)="clearExpr()">C</div>
+  </div>
+
+  <div class="expr">
+    {{ expr }}
+  </div>
+
+  <div class="result">
+    {{ result }}
+  </div>
+
+  <div class="num">
+    <div class="btn" *ngFor="let num of nums" (click)="addExpr(num)">
+      {{ num }}
+    </div>
+  </div>
+
+  <div class="ope">
+    <div class="btn" *ngFor="let ope of opes" (click)="addExpr(ope)">
+      {{ ope }}
+    </div>
+  </div>
+
+  <div class="equal">
+    <div class="btn" (click)="calcExpr()">=</div>
+  </div>
+
+</div>
